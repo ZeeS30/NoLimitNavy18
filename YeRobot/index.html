@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>YeRobot</title>
+	<link href="https://fonts.googleapis.com/css?family=Overpass:700|Roboto|Timmana" rel="stylesheet"></link>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="style.css" rel=stylesheet></link>
+</head>
+<body>
+	<h1>Kanye Says</h1>
+	<h2> By <a href="https://twitter.com/YeRobot">YeRobot</a> </h2>
+	<h3>In collaboration with Kanye West</h3>
+	<script type="text/javascript">
+  var imageURLs = [
+       "Kanye copy.jpg"
+     , "Yeezus.jpg"
+     , "antikanye.jpg",
+     "hotkanye.jpg",
+     "Kanye1.jpg",
+     "Kanye2.jpg",
+     "Kanye 3.jpg",
+  ];
+  function getImageTag() {
+    var img = '<img src=\"';
+    var randomIndex = Math.floor(Math.random() * imageURLs.length);
+    img += imageURLs[randomIndex];
+    img += '\" alt=\"Some alt text\"/>';
+    return img;
+  }
+</script>
+</head>
+<body>
+<script type="text/javascript">
+  document.write(getImageTag());
+</script>
+<!-- Display the countdown timer in an element -->
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("March 30, 2018 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+<!--
+<div class="gallery">
+  <a target="_blank" href="shirt.jpg">
+    <img src="shirt.jpg" alt="Trolltunga Norway" width="300" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="shirt.jpg">
+    <img src="shirt.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="shirt.jpg">
+    <img src="shirt.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="shirt.jpg">
+    <img src="shirt.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>-->
+</body>
+	
